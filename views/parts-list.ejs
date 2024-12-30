@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parts List</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Parts List</h1>
+    <ul>
+        <% parts.forEach(part => { %>
+            <li>
+                <strong>Name:</strong> <%= part.partName %> <br>
+                <strong>Number:</strong> <%= part.partNumber %> <br>
+                <strong>Info:</strong> <%= part.info %> <br>
+                <strong>Phone Number:</strong> <%= part.phoneNumber %> <br>
+                <strong>Place Name:</strong> <%= part.placeName %> <br>
+                <strong>Price:</strong> <%= part.price %> <br>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>

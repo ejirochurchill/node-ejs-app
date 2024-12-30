@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parts List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('../layout.ejs') %>
+    <div class="container">
+        <h1>Logged Parts</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Part Name</th>
+                    <th>Part Number</th>
+                    <th>Purchase Info</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% parts.forEach(part => { %>
+                    <tr>
+                        <td><%= part.partName %></td>
+                        <td><%= part.partNumber %></td>
+                        <td><%= part.purchaseInfo %></td>
+                        <td><%= part.price %></td>
+                        <td>
+                            <a href="/parts/edit/<%= part.id %>">Edit</a>
+                            <form action="/parts/delete/<%= part.id %>" method="POST" style="display:inline;">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <a href="/parts/add" class="btn">Add New Part</a>
+    </div>
+</body>
+</html>

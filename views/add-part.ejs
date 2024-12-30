@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Part</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Add a New Part</h1>
+    <form action="/add-part" method="POST">
+        <label for="partName">Part Name:</label>
+        <input type="text" id="partName" name="partName" required>
+        
+        <label for="partNumber">Part Number:</label>
+        <input type="text" id="partNumber" name="partNumber" required>
+        
+        <label for="info">Info:</label>
+        <textarea id="info" name="info" required></textarea>
+        
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required>
+        
+        <label for="placeName">Place Name:</label>
+        <input type="text" id="placeName" name="placeName" required>
+        
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" required>
+        
+        <button type="submit">Add Part</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

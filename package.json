@@ -1,0 +1,27 @@
+{
+  "name": "node-ejs-app",
+  "version": "1.0.0",
+  "description": "A web application for logging parts with details such as part name, part number, purchase information, and price using EJS for templating.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "keywords": [
+    "node",
+    "ejs",
+    "web",
+    "application"
+  ],
+  "author": "",
+  "license": "ISC"
+}
